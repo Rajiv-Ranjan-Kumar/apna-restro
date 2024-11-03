@@ -57,17 +57,21 @@ const useRazorpayPayment = () => {
                 payment_capture: 1,
             }),
         });
-
+    
+        // Log the response status and body only if the response is not ok
         if (!response.ok) {
-            const errorResponse = await response.json();
-            console.error('Error creating order:', errorResponse.error);
-            alert(`Error creating order: ${errorResponse.error}`);
+            const errorText = await response.text(); // Read the response as text
+            console.error('Error creating order:', errorText);
+            alert(`Error creating order: ${errorText}`);
             return null;
         }
-
+    
+        // If response is okay, then read it as JSON
         const data = await response.json();
         return data.id;
     };
+    
+    
 
     const handlePayment = async (paymentDetails: PaymentDetails) => {
         const orderId = await createOrder(paymentDetails.amount);
