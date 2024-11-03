@@ -1,0 +1,164 @@
+.admin-dashboard {
+    padding: 20px;
+
+    .metrics {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .charts {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+
+        @media screen and (max-width: 960px) {
+            flex-direction: column;
+        }
+
+        .chart-wrapper {
+            flex: 1;
+            background-color: var(--secondary-bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+
+            h3 {
+                margin-bottom: 20px;
+                color: var(--primary-text-color);
+            }
+        }
+    }
+
+    .food-activity-and-review {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        @media screen and (max-width: 960px) {
+            flex-direction: column;
+        }
+
+        .recent-activity {
+            flex: 1;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: var(--secondary-bg-color);
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+
+            h3 {
+                padding-bottom: 10px;
+                border-bottom: 2px solid var(--order-color);
+                margin-bottom: 15px;
+                font-size: 1.2rem;
+                color: var(--primary-text-color);
+            }
+
+            .activity-list {
+                height: 300px;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                overflow-y: auto;
+                scroll-behavior: smooth;
+
+                &::-webkit-scrollbar {display: none;}
+                
+                .activity-item {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+            
+                    .time {
+                        font-weight: bold;
+                        margin-right: 10px;
+                        min-width: 80px;
+                        color: var(--primary-text-color);
+                    }
+            
+                    .event {
+                        flex-grow: 1;
+                        padding: 8px 12px;
+                        border-radius: 4px;
+            
+                        &.order {
+                            background-color: var(--secondary-bg-color);
+                            color: var(--order-color);
+                        }
+                        
+                        &.pickup {
+                            background-color: var(--secondary-bg-color);
+                            color: var(--pickup-color);
+                        }
+                        
+                        &.delivered {
+                            background-color: var(--secondary-bg-color);
+                            color: var(--delivered-color); 
+                        }
+                        
+                        &.feedback {
+                            background-color: var(--secondary-bg-color);
+                            color: var(--feedback-color);
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        .food-reviews {
+            flex: 1;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: var(--secondary-bg-color);
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+
+            h3 {
+                padding-bottom: 10px;
+                border-bottom: 2px solid var(--order-color);
+                font-size: 1.2rem;
+                color: var(--primary-text-color);
+            }
+
+            ul {
+                height: 300px;
+                margin-top: 10px;
+                list-style-type: none;
+                padding: 0;
+                overflow-y: auto;
+                scroll-behavior: smooth;
+
+                &::-webkit-scrollbar{display: none;}
+
+                li {
+                    background-color: var(--secondary-bg-color);
+                    border-radius: 6px;
+                    margin-bottom: 10px;
+                    padding: 15px;
+                    transition: all var(--transition-duration) ease;
+                    color: var(--primary-text-color);
+
+                    &:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+                    }
+
+                    strong {
+                        color: var(--order-color);
+                        font-size: 1.1rem;
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+  

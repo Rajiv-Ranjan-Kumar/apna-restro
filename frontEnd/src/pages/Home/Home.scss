@@ -1,0 +1,33 @@
+.home {
+    .top-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--accent-color);
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: var(--box-shadow);
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity var(--transition-duration), visibility var(--transition-duration), background-color var(--transition-duration);
+
+        &.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:hover {
+            background-color: var(--hover-accent-color);
+        }
+
+        svg {
+            color: var(--primary-text-color);
+        }
+    }
+}

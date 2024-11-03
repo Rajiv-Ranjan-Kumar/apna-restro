@@ -1,0 +1,84 @@
+.header {
+    width: 100%;
+    height: 34vw;
+    margin: 30px auto;
+    position: relative;
+
+    >img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .header-contents {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5vw;
+        max-width: 50%;
+        bottom: 10%;
+        left: 6vw;
+        animation: fadeIn 3s;
+
+        @media screen and (max-width: 1050px) {
+            max-width: 45%;
+        }
+
+        @media screen and (max-width: 760px) {
+            max-width: 65%;
+        }
+
+        > h2 {
+            font-weight: 500;
+            color: var(--primary-text-color);
+            font-size: max(3.5vw, 18px);
+            line-height: 1;
+        }
+
+        > p {
+            color: var(--primary-text-color);
+            font-size: 1.2vw;
+
+            @media screen and (max-width: 760px) {
+                display: none;
+            }
+        }
+
+        > button {
+            border: none;
+            color: var(--secondary-bg-color);
+            font-weight: 500;
+            padding: 1vw 2.3vw;
+            background-color: var(--primary-text-color);
+            font-size: max(1vw, 12px);
+            border-radius: 50px;
+            transition: var(--transition-duration);
+            cursor: pointer;
+
+            @media screen and (max-width: 760px) {
+                padding: 2vw 4vw;
+            }
+
+            @media screen and (max-width: 450px) {
+                padding: 1vw 4vw;
+            }
+
+            &:hover {
+                background-color: var(--hover-accent-color);
+            }
+        }
+    }
+}
+
+.header-x{
+    height: 25vh;
+    margin: 0;
+
+    .header-contents{
+        >h2{
+            font-size: max(2.5vw, 18px);
+            padding-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+.input-tag{
+    width: 100%;
+    height: fit-content;
+
+    .form-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &.__flex-row{
+            flex-direction: row;
+            align-items: center;
+        }
+
+        label {
+            display: block;
+            color: var(--secondary-text-color);
+            text-transform: capitalize;
+            text-wrap: nowrap;
+
+            @media screen and (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--order-color);
+            background-color: var(--primary-bg-color);
+            color: var(--primary-text-color);
+            border-radius: 5px;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border-color: var(--accent-color);
+                box-shadow: 0 0 10px 2px var(--accent-color);
+            }
+
+            &.__readonly{
+                &:focus{
+                    border-color: var(--order-color) !important;
+                    box-shadow: none !important;
+                }
+            }
+
+            &::-webkit-calendar-picker-indicator {
+                filter: invert(1) hue-rotate(180deg);
+            }
+
+            &::-webkit-calendar-picker-indicator {
+                background-color: var(--accent-color);
+                border-radius: 50%;
+                padding: 5px;
+                cursor: pointer;
+            }
+
+            
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px var(--primary-bg-color) inset !important;
+                box-shadow: 0 0 0 1000px var(--primary-bg-color) inset !important;
+                -webkit-text-fill-color: var(--primary-text-color) !important;
+            }
+              
+
+            &.__validity{padding: 11px;}
+            &.__checkbox{
+                width:fit-content;
+                background-color: var(--primary-bg-color);
+            }
+
+            &::placeholder{
+                color: var(--secondary-text-color);
+            }
+        }
+
+        .value-error{border-color: var( --button-danger);}
+    }
+}

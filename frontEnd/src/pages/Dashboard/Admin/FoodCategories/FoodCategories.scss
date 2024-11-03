@@ -1,0 +1,18 @@
+.categories-list-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .table-container {
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+  
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  

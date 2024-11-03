@@ -1,0 +1,70 @@
+.help-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 10px;
+
+  .help-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .help-section {
+    background-color: var(--primary-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--button-danger);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--secondary-text-color);
+      margin-bottom: 10px;
+    }
+  }
+
+  .faq-list,
+  .contact-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .faq-item {
+    > p {
+      > a {
+        color: var(--button-danger);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .faq-item,
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+
+  .faq-question {
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-answer {
+    color: var(--feedback-color);
+  }
+
+  .contact-label {
+    font-weight: bold;
+    color: var(--secondary-text-color);
+    margin-right: 0.5rem;
+  }
+
+  .contact-value {
+    color: var(--feedback-color);
+  }
+}

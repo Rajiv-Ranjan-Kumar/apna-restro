@@ -1,0 +1,16 @@
+.food-list-container {
+    width: 100%;
+    padding: 20px;
+    
+    .table-container {
+        width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+      }
+    
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}

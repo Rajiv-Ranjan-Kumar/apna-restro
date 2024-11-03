@@ -1,0 +1,115 @@
+.my-orders-loading{
+    width: 100%;
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .my-order-loading-container{
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid var(--secondary-text-color);
+        border-radius: 5px;
+
+        .header-container, .button{
+            width: 100%;
+            height: 40px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .row{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+
+                .img{
+                    width: 90px;
+                    min-width: 90px;
+                    height: 90px;
+                    border-radius: 5px;
+                }
+
+                .info{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .title, .price, .quantity{
+                        height: 10px;
+                        border-radius: 5px;
+                    }
+
+                    .title{
+                        width: 100%;
+                        max-width: 200px;
+                    }
+                    
+                    .price{
+                        width: 80%;
+                        max-width: 100px;
+                    }
+
+                    .quantity{
+                        width: 60%;
+                        max-width: 80px;
+                    }
+                }
+            }
+        }
+
+        .button{
+            border-radius: 0;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .header-container, .img, .title, .price, .quantity, .button{
+            background-color: var(--secondary-loading-color);
+            position: relative;
+            overflow: hidden;
+    
+            &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                var(--secondary-loading-color) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                var(--secondary-loading-color) 100%
+            );
+            animation: loading 1.5s infinite;
+            }
+        }
+
+        @keyframes loading {
+            0% {
+              transform: translateX(-100%);
+            }
+            100% {
+              transform: translateX(100%);
+            }
+        }
+    }
+}

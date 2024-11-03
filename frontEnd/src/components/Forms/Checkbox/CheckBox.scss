@@ -1,0 +1,61 @@
+.checkbox-container{
+    width: 100%;
+    height: fit-content;
+
+    .form-group {
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+
+        label {
+            display: block;
+            color: var(--primary-text-color);
+            text-transform: capitalize;
+            text-wrap: wrap;
+        }
+
+        input {
+            margin-top: 4px;
+            padding: 14px;
+            border: 1px solid var(--order-color);
+            background-color: var(--primary-bg-color);
+            color: var(--primary-text-color);
+            border-radius: 5px;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border-color: var(--accent-color);
+                box-shadow: 0 0 10px 2px var(--accent-color);
+            }
+
+            &.__readonly{
+                &:focus{
+                    border-color: var(--order-color) !important;
+                    box-shadow: none !important;
+                }
+            }
+
+            &::-webkit-calendar-picker-indicator {
+                filter: invert(1) hue-rotate(180deg);
+            }
+
+            &::-webkit-calendar-picker-indicator {
+                background-color: var(--accent-color);
+                border-radius: 50%;
+                padding: 5px;
+                cursor: pointer;
+            }
+
+            
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px var(--primary-bg-color) inset !important;
+                box-shadow: 0 0 0 1000px var(--primary-bg-color) inset !important;
+                -webkit-text-fill-color: var(--primary-text-color) !important;
+            } 
+
+        }
+    }
+}

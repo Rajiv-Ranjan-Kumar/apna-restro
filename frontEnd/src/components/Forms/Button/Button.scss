@@ -1,0 +1,38 @@
+.button {
+    width: fit-content;
+    height: fit-content;
+    text-wrap: nowrap;
+
+    .btn{
+      color: var(--primary-text-color);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color var(--transition-duration), transform var(--transition-duration);
+      box-shadow: var(--box-shadow);
+
+      @media screen and (max-width: 768px) {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background-color: var(--primary-bg-color);
+        transform: translateY(-2px);
+      }
+    }
+
+    .btn-back{
+        background-color: var(--button-danger); 
+    }
+
+    .btn-save {
+      background-color: var(--accent-color);
+    }
+
+    .btn-continue {
+      background-color: var(--accent-color);
+    }
+}

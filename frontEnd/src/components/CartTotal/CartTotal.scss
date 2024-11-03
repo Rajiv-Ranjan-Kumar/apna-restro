@@ -1,0 +1,30 @@
+.cart-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    > h2 {
+      color: var(--accent-color);
+      font-size: 30px;
+
+      @media screen and (max-width: 790px) {
+        font-size: 25px;
+        }
+
+        @media screen and (max-width: 450px) {
+            font-size: 20px;
+        }
+    }
+
+    .cart-total-details {
+      display: flex;
+      justify-content: space-between;
+      color: var(--secondary-text-color);
+      padding: 15px 0px 5px 0px;
+    }
+
+    > hr {
+      margin: 10px 0px;
+    }
+}

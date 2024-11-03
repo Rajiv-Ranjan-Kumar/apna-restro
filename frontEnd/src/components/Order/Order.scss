@@ -1,0 +1,134 @@
+.order {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+
+    @media screen and (max-width: 760px) {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .order-left {
+        width: 100%;
+        max-width: max(30%, 500px);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .title {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+
+            @media screen and (max-width: 790px) {
+                font-size: 25px;
+            }
+
+            @media screen and (max-width: 450px) {
+                font-size: 20px;
+            }
+        }
+
+        .address{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            .title{font-size: 18px;}
+
+            .location-icon-container{
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                padding: 5px 10px;
+                background-color: var(--secondary-text-color);
+                border-radius: 5px;
+                text-align: center;
+                justify-content: center;
+                cursor: pointer;
+    
+                .location-icon{
+                    margin-top: 1px;
+                    font-size: 12px;
+                    color: var(--primary-bg-color);
+                    background-color: transparent;
+                }
+    
+                p{
+                    font-size: 12px;
+                    color: var(--primary-bg-color);
+                    font-weight: 600;
+                }
+    
+                &:hover{
+                    background-color: var(--primary-bg-color);
+    
+                    .location-icon, p{color: var(--primary-text-color);}
+                }
+            }
+        }
+
+
+        .multi-fields {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding-top: 10px;
+        }
+
+        .email-input-container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            >span{
+                color: var(--button-danger); 
+                font-size: 12px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .order-right {
+        width: 100%;
+        max-width: max(40%, 500px);
+
+        .card-total {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            > button {
+                border: none;
+                color: var(--primary-text-color);
+                background-color: var(--button-danger);
+                width: max(15vw, 200px);
+                padding: 12px 0px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 30px;
+            }
+
+            .paypal-button-message {
+                display: none !important; /* To hide it */
+                /* color: #ffffff !important; */ /* Uncomment this if you want to make it white instead */
+            }
+        }
+    }
+}
+
+.order2 {
+    margin-top: 30px;
+}

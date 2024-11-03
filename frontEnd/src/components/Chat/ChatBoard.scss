@@ -1,0 +1,154 @@
+.chat-board {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg-color);
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
+
+    .chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        color: var(--primary-text-color);
+
+        h4 {
+            margin: 0;
+        }
+
+        .close-icon {
+            cursor: pointer;
+            color: var(--button-danger);
+            font-size: 1.2rem;
+            transition: color var(--transition-duration);
+
+            &:hover {
+                color: var(--hover-accent-color);
+            }
+        }
+    }
+
+    .message-list {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+        border-bottom: 1px solid var(--secondary-bg-color);
+        background-color: var(--secondary-bg-color);
+        color: var(--primary-text-color);
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        display: flex;
+        flex-direction: column;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .message-item {
+            width: max-content;
+            min-width: 90px;
+            max-width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: var(--primary-bg-color);
+            color: var(--primary-text-color);
+            box-shadow: var(--box-shadow);
+            position: relative;
+
+            .message-text {
+                flex: 1;
+                margin-bottom: 10px;
+            }
+
+            .message-time {
+                width: max-content;
+                font-size: 10px;
+                color: var(--secondary-text-color);
+                margin-left: 10px;
+                align-self: flex-end;
+                position: absolute;
+                bottom: 5px;
+                right: 10px;
+            }
+        }
+
+        .sent{
+            align-self: flex-end;
+            background-color: var(--primary-loading-color);
+        }
+    }
+
+    .input-area {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        position: relative;
+
+        .emoji-icon {
+            font-size: 1.5rem;
+            color: var(--primary-text-color);
+            margin-right: 10px;
+            cursor: pointer;
+            transition: color var(--transition-duration);
+
+            &:hover {
+                color: var(--hover-accent-color);
+            }
+        }
+
+        .emoji-picker {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            z-index: 1;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid var(--secondary-bg-color);
+            border-radius: 5px;
+            background-color: var(--secondary-bg-color);
+            color: var(--primary-text-color);
+            box-shadow: var(--box-shadow);
+
+            &:focus {
+                outline: none;
+                border-color: var(--accent-color);
+            }
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--accent-color);
+            color: var(--primary-text-color);
+            cursor: pointer;
+            transition: background-color var(--transition-duration);
+
+            &:hover {
+                background-color: var(--hover-accent-color);
+            }
+
+            svg {
+                font-size: 1rem;
+            }
+        }
+    }
+}
