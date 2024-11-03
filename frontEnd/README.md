@@ -98,24 +98,24 @@ You can check out the live version of the project here: [Live Demo URL](YOUR_LIV
 
 Here’s an overview of the project structure:
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+<div style="width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
     <div style="width: 48%; margin-bottom: 10px;">
-        <img src="./public/folderStractureScreenShort1.png" alt="Folder Structure 1" style="width: 100%;">
+        <img src="../frontEnd/public/folderStractureScreenShort1.png" alt="Folder Structure 1" style="width: 100%;">
     </div>
     <div style="width: 48%; margin-bottom: 10px;">
-        <img src="./public/folderStractureScreenShort2.png" alt="Folder Structure 2" style="width: 100%;">
+        <img src="../frontEnd/public/folderStractureScreenShort2.png" alt="Folder Structure 2" style="width: 100%;">
     </div>
     <div style="width: 48%; margin-bottom: 10px;">
-        <img src="./public/folderStractureScreenShort3.png" alt="Folder Structure 3" style="width: 100%;">
+        <img src="../frontEnd/public/folderStractureScreenShort3.png" alt="Folder Structure 3" style="width: 100%;">
     </div>
     <div style="width: 48%; margin-bottom: 10px;">
-        <img src="./public/folderStractureScreenShort4.png" alt="Folder Structure 4" style="width: 100%;">
+        <img src="../frontEnd/public/folderStractureScreenShort4.png" alt="Folder Structure 4" style="width: 100%;">
     </div>
     <div style="width: 48%; margin-bottom: 10px;">
-        <img src="./public/folderStractureScreenShort5.png" alt="Folder Structure 5" style="width: 100%;">
+        <img src="../frontEnd/public/folderStractureScreenShort5.png" alt="Folder Structure 5" style="width: 100%;">
     </div>
     <div style="width: 48%; margin-bottom: 10px;">
-        <img src="./public/folderStractureScreenShort6.png" alt="Folder Structure 6" style="width: 100%;">
+        <img src="../frontEnd/public/folderStractureScreenShort6.png" alt="Folder Structure 6" style="width: 100%;">
     </div>
 </div>
 
