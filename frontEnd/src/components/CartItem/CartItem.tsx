@@ -86,9 +86,9 @@ const CartItem: React.FC<CartItemProps> = ({ dashboard }) => {
                     <tr key={index} className="cart-table-row">
                       <td><img src={item.image} alt="" loading='lazy' /></td>
                       <td>{item.name}</td>
-                      <td>${item.price}</td>
+                      <td>₹{item.price}</td>
                       <td>{cartItems[item._id]}</td>
-                      <td>${item.price * cartItems[item._id]}</td>
+                      <td>₹{item.price * cartItems[item._id]}</td>
                       <td className="cross" onClick={() => removeCartItems(item._id)}><FaTrash className='remove-button'/></td>
                     </tr>
                   );

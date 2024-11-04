@@ -45,8 +45,8 @@ const FoodList: React.FC<FoodListProps> = ({ currentItems, handleUpdateFoodStatu
                             <td>
                                 {food.is_available ? (<FaCheckCircle style={{ color: 'green', marginLeft: '8px' }} />) : (<FaTimesCircle style={{ color: 'red', marginLeft: '8px' }} />)}
                             </td>
-                            <td>${food.price}</td>
-                            <td>${food.discount}</td>
+                            <td>₹{food.price}</td>
+                            <td>₹{food.discount}</td>
                             <td>
                                 <button className="action-btn edit-btn" onClick={() => handleUpdateFoodStatus(food.id)}><FaEdit /></button>
                                 <button className="action-btn delete-btn" onClick={() => handleDeleteFood(food.id)}><FaTrashAlt /></button>

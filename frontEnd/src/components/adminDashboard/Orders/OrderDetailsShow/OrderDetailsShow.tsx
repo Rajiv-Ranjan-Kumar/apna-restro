@@ -70,7 +70,7 @@ const OrderDetailsShow:React.FC<OrderDetailsShowProps> = ({ order, handleStatusC
                 </tr>
                 <tr>
                   <td><strong>Total Amount:</strong></td>
-                  <td>${order.totalAmount.toFixed(2)}</td>
+                  <td>₹{order.totalAmount.toFixed(2)}</td>
                 </tr>
                 <tr>
                   <td><strong>Status:</strong></td>

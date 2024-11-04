@@ -41,36 +41,40 @@ interface PaymentDetails {
 
 const useRazorpayPayment = () => {
 
-    const {RAZORPAY_KEY, RAZORPAY_SECRET} = useRequiredEnv();
+    const { RAZORPAY_KEY } = useRequiredEnv();
 
-    const createOrder = async (amount: number): Promise<string | null> => {
-        const response = await fetch('/api/v1/orders', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Basic ' + btoa(`${RAZORPAY_KEY}:${RAZORPAY_SECRET}`),
-            },
-            body: JSON.stringify({
-                amount: amount * 100,
-                currency: 'INR',
-                receipt: 'receipt#1',
-                payment_capture: 1,
-            }),
-        });
+    // const {RAZORPAY_KEY, RAZORPAY_SECRET} = useRequiredEnv();
 
-        if (!response.ok) {
-            const errorResponse = await response.json();
-            console.error('Error creating order:', errorResponse.error);
-            alert(`Error creating order: ${errorResponse.error}`);
-            return null;
-        }
+    // const createOrder = async (amount: number): Promise<string | null> => {
+    //     const response = await fetch('/api/v1/orders', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Authorization': 'Basic ' + btoa(`${RAZORPAY_KEY}:${RAZORPAY_SECRET}`),
+    //         },
+    //         body: JSON.stringify({
+    //             amount: amount * 100,
+    //             currency: 'INR',
+    //             receipt: 'receipt#1',
+    //             payment_capture: 1,
+    //         }),
+    //     });
 
-        const data = await response.json();
-        return data.id;
-    };
+    //     if (!response.ok) {
+    //         const errorResponse = await response.json();
+    //         console.error('Error creating order:', errorResponse.error);
+    //         alert(`Error creating order: ${errorResponse.error}`);
+    //         return null;
+    //     }
+
+    //     const data = await response.json();
+    //     console.log('Order created:', data);
+    //     return data.id;
+    // };
 
     const handlePayment = async (paymentDetails: PaymentDetails) => {
-        const orderId = await createOrder(paymentDetails.amount);
+        // const orderId = await createOrder(paymentDetails.amount);
+        const orderId = 'order_PHDnVkZOQZWizA';
         if (orderId) {
             const options: RazorpayOptions = {
                 key: `${RAZORPAY_KEY}`,
@@ -82,7 +86,7 @@ const useRazorpayPayment = () => {
                 handler: (response: RazorpayResponse) => {
                     console.log("Payment Response:", response);
                     alert("Payment Successful!");
-                    // You can handle post-payment actions here
+                    // handle post-payment actions here
                 },
                 prefill: {
                     name: paymentDetails.prefill.name,

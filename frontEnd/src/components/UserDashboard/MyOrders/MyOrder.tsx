@@ -28,14 +28,14 @@ const MyOrder = ({data}: { data: { id: number; date: string; products: { id: num
                       <img src={product.image} alt={product.name} className="product-image" />
                       <div className="product-info">
                         <h3 className="product-name">{product.name}</h3>
-                        <p className="product-price">${product.price.toFixed(2)}</p>
+                        <p className="product-price">₹{product.price.toFixed(2)}</p>
                         <p className="product-quantity">Quantity: {product.quantity}</p>
                       </div>
                     </div>
                   ))}
                 </div>
                 <div className="order-total">
-                  <span>Total: ${order.total.toFixed(2)}</span>
+                  <span>Total: ₹{order.total.toFixed(2)}</span>
                   {order.status === 'Processing' && <button>Cancel</button>}
                   {order.status === 'On the way' && <button onClick={()=> navigate(userRoutes.userDashboardTrackOrder(order.id.toString()))}>Track Now</button>}
                 </div>

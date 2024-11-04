@@ -18,16 +18,14 @@ interface OrderListProps {
 }
 
 const OrderList:React.FC<OrderListProps> = ({currentOrders, viewOrderDetails}) => {
+  const tableHeading = ['Order ID', 'Customer Name', 'Order Date', 'Total Amount', 'Status', 'Actions'];
   return (
     <table className="orders-table">
         <thead>
           <tr>
-            <th>Order ID</th>
-            <th>Customer Name</th>
-            <th>Order Date</th>
-            <th>Total Amount</th>
-            <th>Status</th>
-            <th>Actions</th>
+            {tableHeading.map((heading, index) =>(
+              <th key={index}>{heading}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
@@ -37,7 +35,7 @@ const OrderList:React.FC<OrderListProps> = ({currentOrders, viewOrderDetails}) =
                 <td>{order.id}</td>
                 <td>{order.customer.name}</td>
                 <td>{order.orderDate}</td>
-                <td>${order.totalAmount.toFixed(2)}</td>
+                <td>₹{order.totalAmount.toFixed(2)}</td>
                 <td>{order.status}</td>
                 <td>
                   <FaEdit className="edit-icon" onClick={() => viewOrderDetails(order.id)} style={{ cursor: 'pointer', fontSize: '1.5rem', color: 'green'}}/>

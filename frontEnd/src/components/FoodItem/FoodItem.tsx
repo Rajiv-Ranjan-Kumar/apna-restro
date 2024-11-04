@@ -46,7 +46,7 @@ const FoodItem: React.FC<items> = ({ id, name, price, description, image, is_ava
                     <img src={assets.rating_starts} alt="" loading='lazy' />
                 </div>
                 <p className='food-item-desc'>{description}</p>
-                <p className='food-item-price'>${price}</p>
+                <p className='food-item-price'>₹{price}</p>
             </div>
         </div>
 

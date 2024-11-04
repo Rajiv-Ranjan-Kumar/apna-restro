@@ -7,17 +7,17 @@ const CartTotal = ({ totalCartAmount, deliveryFee }: { totalCartAmount: number, 
             <div>
                 <div className="cart-total-details">
                     <p>Subtotal</p>
-                    <p>${totalCartAmount}</p>
+                    <p>₹{totalCartAmount}</p>
                 </div>
                 <hr />
                 <div className="cart-total-details">
                     <p>Delivery Fee</p>
-                    <p>${deliveryFee}</p>
+                    <p>₹{deliveryFee}</p>
                 </div>
                 <hr />
                 <div className="cart-total-details">
                     <p>Total</p>
-                    <p>${totalCartAmount + 2}</p>
+                    <p>₹{totalCartAmount + 2}</p>
                 </div>
             </div>
 

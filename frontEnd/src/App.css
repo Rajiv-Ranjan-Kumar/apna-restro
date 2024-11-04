@@ -1,6 +1,9 @@
 .app{
-  width: 80%;
+  width: 100%;
+  padding: 0 8vw;
   margin: auto;
+  padding-bottom: 20px;
+  background-color: var(--secondary-bg-color);
 }
 
 .app2{

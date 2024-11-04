@@ -1,6 +1,7 @@
 const useRequiredEnv = () => {
     const USER_WEB_SOCKET_URL = import.meta.env.VITE_WEB_SOCKET_URL;
     const OPENCAGE_API_KEY = import.meta.env.VITE_WEB_OPENCAGE_API_KEY;
+    const RAZORPAY_API_BASE_URL = import.meta.env.VITE_RAZORPAY_API_BASE_URL;
     const RAZORPAY_KEY = import.meta.env.VITE_RAZORPAY_KEY;
     const RAZORPAY_SECRET = import.meta.env.VITE_RAZORPAY_SECRET;
       
@@ -10,6 +11,10 @@ const useRequiredEnv = () => {
       
     if (!OPENCAGE_API_KEY) {
       throw new Error("OpenChange Api Key is not defined in environment variables.");
+    }
+
+    if(!RAZORPAY_API_BASE_URL) {
+      throw new Error("Razorpay Api Base URL is not defined in environment variables.");
     }
 
     if (!RAZORPAY_KEY) {
@@ -24,6 +29,7 @@ const useRequiredEnv = () => {
     return {
       USER_WEB_SOCKET_URL,
       OPENCAGE_API_KEY,
+      RAZORPAY_API_BASE_URL,
       RAZORPAY_KEY,
       RAZORPAY_SECRET,
     };

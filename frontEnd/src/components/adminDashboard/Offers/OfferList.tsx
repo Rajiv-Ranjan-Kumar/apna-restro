@@ -40,7 +40,7 @@ const OfferList:React.FC<OfferListProps> = ({ currentOffers, formatValidity, han
               <tr key={offer.id}>
                 <td>{offer.foodName}</td>
                 <td>{offer.category}</td>
-                <td>${offer.price}</td>
+                <td>₹{offer.price}</td>
                 <td>{offer.discount}%</td>
                 <td>{offer.offerCode.toUpperCase()}</td>
                 <td>{formatValidity(offer.validity)}</td> 
